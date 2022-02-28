@@ -7,22 +7,18 @@ const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 
-//show loading
-function loading() {
+function showLoadingSpinner() {
   loader.hidden = false;
   quoteContainer.hidden = true;
 }
 
-//hide loading
-function completo() {
+function removeLoadingSpinner() {
   quoteContainer.hidden = false;
   loader.hidden = true;
 }
 
-
-//Mostrar nova frase
 function novaFrase(){
-  loading();
+  showLoadingSpinner();
   //pega uma frase random no API
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
   //chec se autor esta em branco, caso esteja subistitui por 'Desconhecido'
@@ -38,20 +34,19 @@ function novaFrase(){
   }
   //set frase hide loader
   quoteText.textContent = quote.text;
-  completo();
+  removeLoadingSpinner();
 }
 
 //pegar frases da API//
 async function getQuotes(){
-  loading();
+  showLoadingSpinner();
   const apiUrl ='https://type.fit/api/quotes';
   try{
     const resoponse = await fetch(apiUrl);
     apiQuotes = await resoponse.json();
     novaFrase();
   } catch (error){
-
-    //Pega o erro aqui
+    getQuotes();
   }
 }
 
