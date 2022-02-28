@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
+
+:root{
+    --linear-grad: linear-gradient( 120deg, #C0A080, #7882a4 ) ;
+    --button-linear: linear-gradient( 120deg, #7882a4 , #C0A080) ;
+    --letras-formularios: #303030;
+    --border: #D1D1D1;
+    --input-error: red;
+    --button-disabled: #acacac;
+  } 
+
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: smooch Sans, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: var(--linear-grad);
+}
+
+h1{
+    text-align: center;
+    margin-top: 25px ;
+    margin-bottom: 15px;
+    font-size: 40px;
+    letter-spacing: 20px;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(255,255,255,0.8);
+}
+.loader img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-container{
+    margin: 10px 30% ;
+}
+
+.image-container img{
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+
+/* responsive loyalt*/
+@media screen and(max-width:600px) {
+    .loader img{
+        transform: translate(0,0);
+    }
+
+    .image-container{
+        margin: 10px 5%;
+    }
+
+    h1{
+        font-size: 20px;
+        letter-spacing: none;
+    }
+}
