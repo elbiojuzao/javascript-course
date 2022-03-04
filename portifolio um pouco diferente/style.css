@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 :root {
   --primaryColor: #fff;
@@ -241,41 +242,85 @@ section#home a {
 
 section#about {
   background-color: var(--navColor2);
+  display: flex;
+  flex-direction: column;
 }
 
 section#skills {
   background-color: var(--navColor3);
+  flex-direction: column;
 }
+
+#skills h1{
+  font-size: 4vh;
+}
+
+#skill-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+#skill-box{
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 5%;
+  flex: 1 1 33%;
+  max-width: 30%;
+  margin-bottom: 35px;
+  margin-left: 25px;
+  padding-left: 1%;
+  padding-right: 0,5%;
+  padding-bottom: 1%;
+  padding-top: 0.2%;
+}
+
+#skill-title{
+  font-size: 25px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  padding-left: 10px;
+  border-left: 5px solid var(--primaryColor);
+}
+
+#skill-box i{
+  font-size: 45px;
+  margin-right: 10px;
+}
+
+/*PROJETOS*/
 
 section#projects {
   background-color: var(--navColor4);
 }
 
+#bio-image{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  padding-top: 30px;
+}
+/*CONTATOS*/
 section#contact {
   background-color: var(--navColor5);
-  flex: 1 1 20%;
-  min-height: 100vh;
-  text-align: center;
-  padding: 30px 12px;
-}
-
-#social-container{
   display: flex;
-  justify-content: center;
-  list-style: none;
-  border-bottom: 1px solid var(--primaryColor);
-  margin-bottom: 25px;
-  padding-bottom: 25px;
+  flex-direction: column;
 }
 
-#social-container li{
-  flex: 1 1 0;
-  max-width: 60px;
+.contato-social{
+  background-color: rgba(0,0,0,0.3);
+  
 }
 
-#social-container li a{
-  color: black;
-  font-size: 30px;
+.fab {
+  font-size: 100px;
+  margin-right: 50px;
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+
+.fab:hover {
+  color: red;
 }
 
 /* Media Query: Large Smartphone (Vertical) */
@@ -288,5 +333,16 @@ section#contact {
   .menu-bars {
     top: 0.5rem;
     right: 1rem;
+  }
+
+  #skill-box{
+      flex: 1 1 100%;
+      max-width: 90%;
+      margin-bottom: 40px;
+      text-align: left;
+  }
+
+  #skill-box i{
+      font-size: 60px;
   }
 }
