@@ -17,7 +17,16 @@ html {
 body {
   margin: 0;
   background: #000;
-  font-family: Montserrat, sans-serif;
+  font-family: 'montserrat', sans-serif;
+}
+
+h1{
+  font-size: 6vh;
+}
+
+h2{
+  font-size: 3vh;
+  text-align: center;
 }
 
 /* --- Navigation Menu ------------------------------ */
@@ -246,6 +255,14 @@ section#about {
   flex-direction: column;
 }
 
+#bio-image{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  padding-top: 30px;
+}
+
 section#skills {
   background-color: var(--navColor3);
   flex-direction: column;
@@ -291,40 +308,109 @@ section#skills {
 
 section#projects {
   background-color: var(--navColor4);
-}
-
-#bio-image{
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  margin-bottom: 25px;
-  padding-top: 30px;
-}
-/*CONTATOS*/
-section#contact {
-  background-color: var(--navColor5);
   display: flex;
   flex-direction: column;
 }
 
-.contato-social{
-  background-color: rgba(0,0,0,0.3);
-  
+/*botao de projetos*/
+#btn-container{
+  display: flex;
+  flex-direction: row;
+}
+
+#btn-projects{
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--primaryColor);
+  background-color: #847617;
+  border: 2px solid #FFF9CF;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: .5s;
+  margin:25px 0;
+  padding: 12px 10px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+}
+
+#btn-projects ion-con,
+#btn-projects span{
+ flex: 1 1 0;
+}
+
+#btn-projects ion-con{
+  font-size: 20px;
+  max-width: 20px;
+}
+
+#btn-projects:hover{
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+#btn-container a{
+  margin: 50px;
+}
+
+/*CONTATOS*/
+section#contact {
+  background-color: var(--navColor5);
+  flex-direction: column;
+}
+
+#contact i{
+  display: flex;
+  margin-top: 25px;
+}
+
+#contato-social{
+  display: flex;
+  flex-direction: row;
+}
+
+#contact a{
+  display: flex;
+  text-decoration: none;
+  padding: 25px;
 }
 
 .fab {
-  font-size: 100px;
-  margin-right: 50px;
+  font-size: 75px;
   cursor: pointer;
-  color: var(--primaryColor);
+  color: #847617;
 }
 
 .fab:hover {
+  transform: scale(1.2);
   color: red;
 }
 
 /* Media Query: Large Smartphone (Vertical) */
 @media (max-width: 600px) {
+  section {
+    height: 120vh;
+  }
+
+  section#home {
+    background-image: url("https://images.unsplash.com/photo-1599837565318-67429bde7162?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  h1{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
   section#home a {
     top: 1rem;
     left: 1rem;
@@ -338,11 +424,20 @@ section#contact {
   #skill-box{
       flex: 1 1 100%;
       max-width: 90%;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       text-align: left;
   }
 
   #skill-box i{
-      font-size: 60px;
+      font-size: 30px;
+  }
+
+  #btn-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contato-social {
+    flex-direction: column;
   }
 }
