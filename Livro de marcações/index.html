@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=jacinto.design">
+</head>
+<body>
+    <!--addmarcador-->
+    <h1 id="show-modal">ADD marcador</h1>
+    <!--marcadores-->
+    <div class="container" id="bookmarks-container"></div>
+    <!--modal-->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <i class="fas fa-circle-xmark close-icon" id="close-modal"></i>
+            <div class="modal-header">
+                <h3>Add Marcador</h3>
+            </div>
+            <div class="modal-content">
+                <form id="bookmark-form">
+                    <!--nome do site-->
+                    <div class="form-group">
+                        <label for="website-name" class="form-label">Nome do Site</label>
+                        <input type="text" class="form-input" id="website-name">
+                    </div>
+                    <!--nome do url-->
+                    <div class="form-group">
+                        <label for="website-url" class="form-label">Nome do URL</label>
+                        <input type="text" class="form-input" id="website-url">
+                    </div>
+                    <button type="submit">Adcionar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--script-->
+    <script src="script.js"></script>
+    
+</body>
+</html>
