@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA API Pictures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
+    <!-- ZTM Favicon -->
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader hidden">
+        <img src="rocket.svg" alt="Roket Loading Animation">
+    </div>
+    <!--container-->
+    <div class="container">
+        <!--nav-->
+        <div class="navigation-container">
+            <span class="background"></span>
+            <!--results Nav-->
+            <span class="navigation-items" id="resultsNav">
+                <h3 class="clickable" onclick="updateDOM('favorites')">Favoritos</h3>
+                <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="clickable" onclick="getNasaPictures()">Carrega mais</h3>
+            </span>
+            <!--favoritos Nav-->
+            <span class="navigation-items hidden" id="favoritesNav">
+                <h3 class="clickable" onclick="getNasaPictures()">Carrega mais NASA Imagens</h3>
+            </span>
+        </div>
+        <!--img container-->
+        <div class="images-container">
+            <!--<div class="card">
+                <a href="" title="Veja a Imagem completa" target="_blank">
+                    <img src="https://apod.nasa.gov/apod/image/2203/Pillars_HstBibillo_1097.jpg" alt="NASA Picture of the day" class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Titulo da imagem</h5>
+                    <p class="clickable">Adcionar aos favoritos</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolor modi molestiae iusto natus tenetur placeat necessitatibus reiciendis! Nesciunt laboriosam voluptatum ea a provident explicabo placeat numquam iure quaerat minus?</p>
+                    <small class="text-muted">
+                        <strong>05-07-1996</strong>
+                        <span>Copyright info</span>
+                    </small>
+                </div>
+            
+            </div>-->
+        </div>
+    </div>
+    <!--save-->
+    <div class="save-confirmed" hidden>
+        <h1>Adicionado!</h1>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
