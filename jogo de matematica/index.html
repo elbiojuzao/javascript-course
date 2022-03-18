@@ -9,95 +9,94 @@
 </head>
 <body>
     <div class="game-container">
-        <!--cabeçalho-->
+
+        <!-- Header -->
         <div class="header">
-            <h1>Jogo da matematica</h1>
+            <h1>Jogo da Matematica</h1>
         </div>
-        <!--splash page-->
-        <div class="card" id="splash-page" hidden>
+
+        <!-- Splash Page -->
+        <div class="card" id="splash-page">
             <form id="start-form">
                 <div class="selection-container">
-                    <!--10 questoes-->
+                    <!-- 10 Questions Radio Input -->
                     <div class="radio-container">
-                        <label for="value-10">10 Questoes</label>
+                        <label for="value-10">10 Questões</label>
                         <input type="radio" name="questions" value="10" id="value-10">
                         <span class="best-score">
                             <span>Recorde</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
-                    <!--25 questoes-->
+                    <!-- 25 Questions Radio Input -->
                     <div class="radio-container">
-                        <label for="value-25">25 Questoes</label>
+                        <label for="value-25">25 Questões</label>
                         <input type="radio" name="questions" value="25" id="value-25">
                         <span class="best-score">
                             <span>Recorde</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
-                    <!--50 questoes-->
+                    <!-- 50 Questions Radio Input -->
                     <div class="radio-container">
-                        <label for="value-50">50 Questoes</label>
+                        <label for="value-50">50 Questões</label>
                         <input type="radio" name="questions" value="50" id="value-50">
                         <span class="best-score">
                             <span>Recorde</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
-                    <!--99 questoes-->
+                    <!-- 99 Questions Radio Input -->
                     <div class="radio-container">
-                        <label for="value-99">99 Questoes</label>
+                        <label for="value-99">99 Questões</label>
                         <input type="radio" name="questions" value="99" id="value-99">
                         <span class="best-score">
                             <span>Recorde</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
-
                 </div>
-                <!--iniciar-->
+                <!-- Start Button -->
                 <div class="selection-footer">
                     <button class="start" type="submit">Começar</button>
                 </div>
             </form>
         </div>
-        <!--countdown page-->
+
+        <!-- Countdown Page -->
         <div class="card" id="countdown-page" hidden>
             <h1 class="countdown">3</h1>
         </div>
-        <!--game page-->
-        <div class="card" id="game-page" hidden>
-            <!--itens containers-->
-            <div class="item-container">
-                
-                </div>
-            </div>
-            <!--ta certo ou errado-->
-            <div class="item-footer">
-                <button class="wrong">Erradinho</button>
-                <button class="right">Ta certo</button>
-            </div>
-        </div>
 
-        <!--record page-->
+        <!-- Game Page -->
+        <div class="card" id="game-page" hidden>
+            <!-- Item Container -->
+            <div class="item-container"></div>
+            <!-- Right/Wrong Buttons -->
+            <div class="item-footer">
+                <button class="wrong" onclick="select(false)">Errado</button>
+                <button class="right" onclick="select(true)">Certo</button>
+            </div>
+        </div>        
+
+        <!-- Score Page -->
         <div class="card" id="score-page" hidden>
-            <!--score container-->
+            <!-- Score Container -->
             <div class="score-container">
                 <h1 class="title">Seu tempo</h1>
-                <h1 class="final-time">3.4s</h1>
-                <h1 class="base-time">Tempo Base: 2.4s</h1>
-                <h1 class="penalty-time">Penalidade: +1.0s</h1>
+                <h1 class="final-time"></h1>
+                <h1 class="base-time"></h1>
+                <h1 class="penalty-time"></h1>
             </div>
-            <!--reiniciar-->
+            <!-- Play Again Button -->
             <div class="score-footer">
-                <button class="play-again">Jogar novamente</button>
+                <button class="play-again" onclick="playAgain()" hidden>Jogar novamente</button>
             </div>
         </div>
-
-
 
     </div>
     <!-- Script -->
+    <script src="shuffle.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
